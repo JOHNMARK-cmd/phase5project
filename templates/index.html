@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Yields Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="District" placeholder="District(1,2,3..)" required="required" />
+	<input type="text" name="Block" placeholder="Block(1,2,3..)" required="required" />
+	<input type="text" name="CultLand" placeholder="Cultivated Land" required="required" />
+	<input type="text" name="CropCultLand" placeholder="Land with Crop Cultivated" required="required" />
+	<input type="text" name="LandPreparationMethod" placeholder="Land Preparation Method(1,2,3...)" required="required" />
+	<input type="text" name="CropTillageDepth" placeholder="Crop Tillage Depth" required="required" />
+	<input type="text" name="CropEstMethod" placeholder="Crop Establishment Method(1,2,3...)" required="required" />
+	<input type="text" name="SeedlingsPerPit" placeholder="SeedlingsPerPit" required="required" />
+	<input type="text" name="NursDetFactor" placeholder="Nursery Determinant Factor(1,2,3...)" required="required" />
+	<input type="text" name="TransDetFactor" placeholder="Transplant Determinant Factor(1,2,3...)" required="required" />
+	<input type="text" name="TransplantingIrrigationHours" placeholder="Transplanting Irrigation Hours" required="required" />
+	<input type="text" name="TransplantingIrrigationSource" placeholder="Transplanting Irrigation Source" required="required" />
+	<input type="text" name="TransplantingIrrigationPowerSource" placeholder="Transplanting Irrigation PowerSource" required="required" />
+	<input type="text" name="TransIrriCost" placeholder="Transplanting Irrigation Cost" required="required" />
+	<input type="text" name="StandingWater" placeholder="Days of Standing Water" required="required" />
+	<input type="text" name="Ganaura" placeholder="Amount of organi fertilizer" required="required" />
+	<input type="text" name="CropOrgFYM" placeholder="Amount of FYM used" required="required" />
+	<input type="text" name="PCropSolidOrgFertAppMethod" placeholder="Organic Fertilizer Application Method" required="required" />
+	<input type="text" name="NoFertilizerAppln" placeholder="No. of times chemical fert has been applied" required="required" />
+	<input type="text" name="CropbasalFerts" placeholder="Type of Chemical Fert" required="required" />
+	<input type="text" name="BasalDAP" placeholder="Amount of DAP" required="required" />
+	<input type="text" name="BasalUrea" placeholder="Amount of Urea" required="required" />
+	<input type="text" name="MineralFertAppMethod" placeholder="Mineral Fert App Method" required="required" />
+	<input type="text" name="FirstTopDressFert" placeholder="First Top Dress Fert" required="required" />
+	<input type="text" name="1tdUrea" placeholder="Amount of Urea in 1st Top dressing" required="required" />
+	<input type="text" name="2tdUrea" placeholder="Amount of Urea in 2nd Top dressing" required="required" />
+	<input type="text" name="MineralFertAppMethod.1" placeholder="Mineral Fert App Method" required="required" />
+	<input type="text" name="Harv_method" placeholder="Harvest method" required="required" />
+	<input type="text" name="Harv_hand_rent" placeholder="Harvest hand rent" required="required" />
+	<input type="text" name="Threshing_method" placeholder="Threshing method" required="required" />
+	<input type="text" name="Residue_length" placeholder="Residue length" required="required" />
+        <input type="text" name="Residue_perc" placeholder="Residue percentage" required="required" />
+	<input type="text" name="Stubble_use" placeholder="Stubble used" required="required" />
+		<input type="text" name="Acre" placeholder="Acres" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
