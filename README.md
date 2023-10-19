@@ -71,7 +71,6 @@ Inside the project's scope are the following components:
 
 - **Crop Yield Prediction:** This project will focus on the development of predictive models for major crops in select regions of India. It will involve the collection and analysis of historical crop yield data, climate data, soil data, and agronomic practices. The models will be designed to accommodate variations in different agro-climatic zones.
 
-- **Recommendations:** Offering actionable suggestions to curb the problem of pneumonia in hospitals and the community at large.
 
 ### Stakeholders
 
