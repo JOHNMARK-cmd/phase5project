@@ -53,7 +53,6 @@ Several models and approaches will be used to predict crop yields:
 
 - **Machine Learning Models:** Machine learning techniques such as decision trees, random forests, support vector machines, and neural networks will be used to analyze complex interactions between various factors affecting crop yields.
 
-- **Crop Simulation Models:** Crop simulation models like DSSAT (Decision Support System for Agrotechnology Transfer) and APSIM (Agricultural Production Systems sIMulator) simulate the growth of crops based on input data like weather, soil, and management practices. They can predict yields under different scenarios.
 
 ### Libraries and Tools
 
@@ -64,7 +63,7 @@ The project utilizes various libraries and tools for data analysis and model dev
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- 
+- Scipy
 
 ### Project Scope
 
